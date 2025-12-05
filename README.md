@@ -28,6 +28,7 @@
 - **UI Components**: shadcn/ui (Radix UI)
 - **State Management**: React Context API
 - **HTTP Client**: Axios
+- **Data Visualization**: Recharts
 - **Icons**: Lucide React
 - **Fonts**: Geist Sans & Geist Mono
 
@@ -86,6 +87,7 @@ course-master-backend/
 course-master-frontend/
 ├── app/                     # Next.js App Router
 │   ├── admin/               # Admin pages
+│   │   ├── analytics/
 │   │   ├── assignments/
 │   │   ├── courses/
 │   │   ├── dashboard/
@@ -109,6 +111,7 @@ course-master-frontend/
 │   ├── ui/                  # shadcn/ui components
 │   ├── shared/              # Shared components
 │   ├── AdminSidebar.tsx
+│   ├── AnalyticsChart.tsx
 │   ├── CourseCard.tsx
 │   ├── EmptyState.tsx
 │   ├── LoadingSpinner.tsx
@@ -350,7 +353,8 @@ course-master-frontend/
 - **Materials**: Access assignments and quizzes per lesson
 
 ### Admin Features
-- **Dashboard**: Statistics overview
+- **Dashboard**: Statistics overview with key metrics
+- **Analytics Dashboard**: Visual enrollment trends with interactive charts
 - **Course Management**: CRUD operations
 - **Syllabus Builder**: Dynamic lesson management
 - **Batch Management**: Configure course batches
@@ -386,6 +390,7 @@ course-master-frontend/
 
 ### Admin Pages (Protected)
 - `/admin/dashboard` - Admin overview
+- `/admin/analytics` - Analytics dashboard with enrollment charts
 - `/admin/courses` - Manage courses
 - `/admin/courses/create` - Create course
 - `/admin/courses/edit/[id]` - Edit course
@@ -434,6 +439,29 @@ ADMIN_PASSWORD=Admin@123
 **Frontend (.env.local):**
 ```env
 NEXT_PUBLIC_API_URL=http://localhost:5000/api
+```
+
+---
+
+## 🔑 Default Admin Credentials
+
+After running the backend for the first time, an admin account is automatically created using the admin seeder script. You can use these credentials to access the admin panel:
+```
+Or you can create your own admin account by using the admin seeder script.
+
+Run the following command: pnpm run seeder
+```
+Email: admin@coursemaster.com
+Password: Admin@123
+```
+
+> [!IMPORTANT]
+> **Security Notice**: These are default credentials for development purposes. Make sure to change the admin password in production or use different credentials by updating the `ADMIN_EMAIL` and `ADMIN_PASSWORD` environment variables in your `.env` file before starting the backend.
+
+**Admin Seeder Configuration:**
+```env
+ADMIN_EMAIL=admin@coursemaster.com
+ADMIN_PASSWORD=Admin@123
 ```
 
 ---
@@ -489,6 +517,8 @@ NEXT_PUBLIC_API_URL=http://localhost:5000/api
 ✅ Assignment submission
 ✅ Quiz submission with auto-grading
 ✅ Admin dashboard with statistics
+✅ Analytics dashboard with enrollment trends
+✅ Interactive data visualization (Recharts)
 ✅ Material management (assignments/quizzes)
 ✅ Responsive UI design
 ✅ Role-based access control
@@ -533,9 +563,11 @@ Potential improvements:
 - Discussion forums
 - Live classes
 - Mobile app
-- Analytics dashboard
+- Advanced analytics (student performance, course completion rates)
 - Email notifications
 - Social authentication
+- Export analytics data (CSV, PDF)
+- Custom date range filtering for analytics
 
 ---
 
