@@ -34,6 +34,23 @@
 
 ---
 
+---
+
+## 🔑 Default Admin Credentials
+
+After running the backend for the first time, an admin account is automatically created using the admin seeder script. You can use these credentials to access the admin panel:
+
+> [!IMPORTANT]
+> **Security Notice**: These are default credentials for development purposes. Make sure to change the admin password in production or use different credentials by updating the `ADMIN_EMAIL` and `ADMIN_PASSWORD` environment variables in your `.env` file before starting the backend.
+
+**Admin Seeder Configuration:**
+```env
+ADMIN_EMAIL=admin@coursemaster.com
+ADMIN_PASSWORD=Admin@123
+```
+
+---
+
 ## 📁 Project Structure
 
 ### Backend Structure
@@ -440,31 +457,6 @@ ADMIN_PASSWORD=Admin@123
 ```env
 NEXT_PUBLIC_API_URL=http://localhost:5000/api
 ```
-
----
-
-## 🔑 Default Admin Credentials
-
-After running the backend for the first time, an admin account is automatically created using the admin seeder script. You can use these credentials to access the admin panel:
-```
-Or you can create your own admin account by using the admin seeder script.
-
-Run the following command: pnpm run seeder
-```
-Email: admin@coursemaster.com
-Password: Admin@123
-```
-
-> [!IMPORTANT]
-> **Security Notice**: These are default credentials for development purposes. Make sure to change the admin password in production or use different credentials by updating the `ADMIN_EMAIL` and `ADMIN_PASSWORD` environment variables in your `.env` file before starting the backend.
-
-**Admin Seeder Configuration:**
-```env
-ADMIN_EMAIL=admin@coursemaster.com
-ADMIN_PASSWORD=Admin@123
-```
-
----
 
 ## 🔧 Key Technical Decisions
 
