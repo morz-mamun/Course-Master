@@ -6,6 +6,10 @@
 
 ---
 
+## GitHub Repo: 
+Frontend: https://github.com/morz-mamun/course-master-frontend#
+
+
 ## 🏗️ Architecture
 
 ### Technology Stack
