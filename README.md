@@ -7,7 +7,8 @@
 ---
 
 ## GitHub Repo: 
-Frontend: https://github.com/morz-mamun/course-master-frontend#
+### Frontend: https://github.com/morz-mamun/course-master-frontend#
+### Backend: https://github.com/morz-mamun/course-master-backend
 
 
 ## 🏗️ Architecture
